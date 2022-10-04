@@ -20,7 +20,9 @@ app_returns <-data$Returns...12
 app_model<- lm(app_returns ~ app_years+app_temp+app_births+app_workdays+app_weekends+app_holidays+app_summer+app_autumn+app_winter+app_spring)
 app_summary<-summary(app_model)
 app_summary
-
+coefficients(app_model)
+layout(matrix(c(1,2,3,4),2,2)) 
+plot(app_model)
 
 #baby variables
 bab_years <-data$Year...14
@@ -38,6 +40,9 @@ bab_returns <-data$Returns...24
 bab_model<- lm(bab_returns ~ bab_years+bab_temp+bab_births+bab_workdays+bab_weekends+bab_holidays+bab_summer+bab_autumn+bab_winter+bab_spring)
 bab_summary<-summary(bab_model)
 bab_summary
+coefficients(bab_model)
+layout(matrix(c(1,2,3,4),2,2)) 
+plot(bab_model)
 
 #bags variables
 bag_years <-data$Year...26
@@ -55,6 +60,9 @@ bag_returns <-data$Returns...36
 bag_model<- lm(bag_returns ~ bag_years+bag_temp+bag_births+bag_workdays+bag_weekends+bag_holidays+bag_summer+bag_autumn+bag_winter+bag_spring)
 bag_summary<-summary(bag_model)
 bag_summary
+coefficients(bag_model)
+layout(matrix(c(1,2,3,4),2,2)) 
+plot(bag_model)
 
 #blankets variables
 blanket_years <-data$Year...38
@@ -72,3 +80,6 @@ blanket_returns <-data$Returns...48
 blanket_model<- lm(blanket_returns ~ blanket_years+blanket_temp+blanket_births+blanket_workdays+blanket_weekends+blanket_holidays+blanket_summer+blanket_autumn+blanket_winter+blanket_spring)
 blanket_summary<-summary(blanket_model)
 blanket_summary
+coefficients(blanket_model)
+layout(matrix(c(1,2,3,4),2,2)) 
+plot(blanket_model)
